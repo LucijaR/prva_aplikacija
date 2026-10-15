@@ -1,0 +1,23 @@
+1. zadatak kolekcije
+
+print( bodovi.where( (b) => b >= 55 ).toSet.length());s
+
+2. zadatak
+final zadaci = <Zadatak>[
+  const Zadatak(naslov: 'Instalacija'),
+  const Zadatak(naslov: 'Git', zavrsen: true),
+  const Zadatak(naslov: 'Dart'),
+];
+ 
+// 1. Dohvatite otvorene zadatke.
+    int get dohvatiZadatke => zadaci.where((z) => !z.zavrsen);
+
+// 2. Ispišite njihove naslove.
+for (var zadatak in otvoreniZadaci) {
+  print(zadatak.naslov);
+}
+
+// Ili kraće koristeći forEach
+otvoreniZadaci.forEach((z) => print(z.naslov));
+
+// 3. Dodajte metodu kopiraj(zavrsen: ...).
